@@ -1,0 +1,10 @@
+## use a row to make a dataset column header
+> names(dataset) <- dataset[1,]
+
+## remove that row after
+> dataset <- dataset[-1,]
+
+## export a dataset
+install.packages("writexl")
+library("writexl")
+write_xlsx(dataset, "new location")
